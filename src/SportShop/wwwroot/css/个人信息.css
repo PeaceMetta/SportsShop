@@ -1,0 +1,175 @@
+﻿/*顶部LOGO与搜索栏样式*/
+@media screen and (max-width:400px){
+	.head-body{
+		display: block;
+	}
+}
+
+@media screen and (min-width:400px){
+
+	.head-body{
+		display:flex;
+		height: 90px;
+		width: 100%;
+		min-width: 400px;
+		margin: 0px auto;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.head-body .logo{
+	height: 50%;
+	width: 50%;
+	min-width: 100px;
+    float:left;
+    margin-left:30px;
+}
+
+.head-body .search{
+	display: flex;
+	width: 35%;
+	min-width: 150px;
+	overflow: hidden;
+    margin-top:80px;
+}
+
+/*个人信息*/
+
+.tr-head{
+    background-color:black;
+    color:white;
+}
+
+.table1{
+    height:80%;
+    width:125%;
+	border:0px solid white;
+    margin:-130px;
+}
+	
+.tab1-t{
+    border:1px solid black;
+    border-bottom:0px;
+    border-left:0px;
+    border-right:0px;
+}
+
+.table2{
+    margin:-110px;
+    height:80%;
+    width:125%;
+    border:1px solid #808080;
+    border-left:0px;
+    border-right:0px;
+    text-align:center;
+}
+
+.tab2-2{
+    border-bottom:1px solid #808080;
+    background-color:black;
+    color:white;
+}
+
+.tab-3{
+    height:50px;
+}
+
+.table3{
+        margin:-110px;
+}
+
+.table3 img{
+    width:200px;
+    height:200px;
+}
+
+.leader-left{
+    height:100%;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.table4 {
+    text-align:center;
+    width:100%;
+    height:80px;
+    border:solid 0px #808080;
+}
+
+.table4 th{
+    border-bottom:solid 1px;
+    border-color:#808080;
+}
+
+.table5 {
+    text-align:center;
+    width:100%;
+    height:240px;
+    border:solid 1px;
+    border-color:#808080;
+    border-bottom:0px;
+    border-left:0px;
+    border-right:0px;
+}
+
+.table5 th{
+    border-bottom:solid 1px;
+    border-color:#808080;
+}
+
+.table6 {
+    text-align:center;
+    width:100%;
+    height:80px;
+    border:solid 1px;
+    border-color:#808080;
+    border-bottom:0px;
+    border-left:0px;
+    border-right:0px;
+}
+
+.table6 th{
+    border-bottom:solid 1px;
+    border-color:#808080;
+}
+
+.table7 {
+    text-align:center;
+    width:100%;
+    height:80px;
+    border:solid 1px;
+    border-color:#808080;
+    border-left:0px;
+    border-right:0px;
+}
+
+.table7 th{
+    border-bottom:solid 1px;
+    border-color:#808080;
+}
+
+.btn-col{
+    width:100%;
+    margin-top:20px;
+}
+
+
+/*滑动导航*/
+#panel,#flip1,#pane2,#flip2,#pane3,#flip3,#pane4,#flip4,#pane5,#flip5,#pane6,#flip6,#pane7,#flip7,#pane8,#flip8,#pane9,#flip9,#pane10,#flip10
+{
+	padding:5px;
+	background-color:#e5eecc;
+	border:solid 1px white;
+    width:100%;
+}
+#panel,#pane2,#pane3,#pane4,#pane5,#pane6,#pane7,#pane8,#pane9,#pane10
+{
+    border:solid 1px white;
+    background-color:white;
+	padding:10%;
+	display:none;
+    margin-left:18%;
+    margin-top:4%;
+    width:82%;
+}

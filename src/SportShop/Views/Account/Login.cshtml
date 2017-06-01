@@ -1,0 +1,97 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<environment>
+    <link rel="stylesheet" type="text/css" href="~/css/login.css">
+</environment>
+
+<h2>@ViewData["Title"].</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section>
+            <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                <h4>使用账号登录</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="col-md-2 control-label"></label>
+                    <div class="col-md-10">
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            <label asp-for="RememberMe">
+                                <input asp-for="RememberMe" />
+                                @Html.DisplayNameFor(m => m.RememberMe)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-default">登录</button>
+                    </div>
+                </div>
+                <p>
+                    <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">注册？</a>
+                </p>
+                <p>
+                    <a asp-action="ForgotPassword">忘记密码？</a>
+                </p>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section>
+            <h4>欢迎登陆体育用品购买系统</h4>
+            <hr />
+            @{
+                var loginProviders = SignInManager.GetExternalAuthenticationSchemes().ToList();
+                if (loginProviders.Count == 0)
+                {
+                    <div>
+                        <p>
+                            各项回馈项目（包含各项商品、服务或抵用券等）及兑换标准及兑换规则均以兑换当时最新回馈活动公告或目录为准。<br />
+                            部分兑换商品有数量限制的，兑完为止。<br />
+                            公告或目录如有有效期限的，逾期即不得兑换。<br />
+                            积分兑换区的商品为只可用积分兑换的商品（如积分价格：100积分）。<br />
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form asp-controller="Account" asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in loginProviders)
+                                {
+                                    <button type="submit" class="btn btn-default" name="provider" value="@provider.AuthenticationScheme" title="Log in using your @provider.DisplayName account">@provider.AuthenticationScheme</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "ShopCar";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<environment>
+    <link rel="stylesheet" type="text/css" href="~/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/购物车.css">
+</environment>
+
+
+<div class="head-body">
+    <div class="logo">
+        <img src="~/img/logo.png.png" />
+    </div>
+    <div class="search">
+        <input type="search" class="form-control" placeholder="search">
+        <span>
+            <button class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </div>
+</div>
+
+<div class="biaozhi">
+    <i class="fa fa-shopping-cart">购物车</i>
+</div>
+
+<div class="form-bottom">
+    <table class="table1 col-sm-12">
+        <tr class="tr-head">
+            <th>商品</th>
+            <th>销售价</th>
+            <th>数量</th>
+            <th>优惠金额</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td><img src="~/img/shopcar-1.jpg">NIKE AIR FOAMPOSITE ONE</td>
+            <td>7588</td>
+            <td>1 对</td>
+            <td>¥0.00</td>
+            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+        </tr>
+        <tr>
+            <td><img src="~/img/shopcar-3.jpg">AIR JORDAN 1 RETRO HIGH OG</td>
+            <td>4688</td>
+            <td>1 对</td>
+            <td>¥0.00</td>
+            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+        </tr>
+        <tr>
+            <td><img src="~/img/shopcar-4.jpg">Air Jordan 12 “Flu Game 黑红”</td>
+            <td>1688</td>
+            <td>1 对</td>
+            <td>¥0.00</td>
+            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+        </tr>
+        <tr>
+            <td><img src="~/img/shopcar-2.jpg">Under Armour Men's HeatGear Shirt”</td>
+            <td>288</td>
+            <td>1 件</td>
+            <td>$0.00</td>
+            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+        </tr>
+        <tr class="shopcar-bottom">
+            <td colspan="5">1</td>
+        </tr>
+    </table>
+    </div>
+
+
+
+    <button class="btn btn-primary btn-lg but-1" data-toggle="modal" data-target="#myModal">
+        结算
+    </button>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">
+                        订单状态：
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table1 col-sm-12">
+                        <tr class="tr-head">
+                            <th>商品</th>
+                            <th>销售价</th>
+                            <th>数量</th>
+                            <th>优惠金额</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td><img src="~/img/shopcar-1.jpg">NIKE AIR FOAMPOSITE ONE</td>
+                            <td>7588</td>
+                            <td>1 对</td>
+                            <td>¥0.00</td>
+                            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/img/shopcar-3.jpg">AIR JORDAN 1 RETRO HIGH OG</td>
+                            <td>4688</td>
+                            <td>1 对</td>
+                            <td>¥0.00</td>
+                            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/img/shopcar-4.jpg">Air Jordan 12 “Flu Game 黑红”</td>
+                            <td>1688</td>
+                            <td>1 对</td>
+                            <td>¥0.00</td>
+                            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/img/shopcar-2.jpg">Under Armour Men's HeatGear Shirt”</td>
+                            <td>288</td>
+                            <td>1 件</td>
+                            <td>$0.00</td>
+                            <td><a href="#">移除</a>/<a href="#">收藏</a></td>
+                        </tr>
+                        <tr class="shopcar-bottom">
+                            <td colspan="5">1</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-target="#myModal2" data-dismiss="modal">
+                        下一步
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <environment>
+
+        <script>
+            $(function () {
+                $('#myModal').modal({
+                    keyboard: true
+                })
+            });
+        </script>
+        <script type="text/javascript" src="~/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="~/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="~/js/retina-1.1.0.js"></script>
+        <script type="text/javascript" src="~/js/scripts.js"></script>
+    </environment>

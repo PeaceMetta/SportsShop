@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+ background:url(../img/banner.jpg);
+ padding:100px 0px 30px 0px;
+ font-size: 26px;
+ text-align:center;
+}

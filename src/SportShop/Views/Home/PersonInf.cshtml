@@ -1,0 +1,224 @@
+﻿@{
+    ViewBag.Title = "Collect";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<environment>
+    <link rel="stylesheet" type="text/css" href="~/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/个人信息.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+</environment>
+
+<div class="head-body">
+    <div class="logo">
+        <img src="~/img/logo.png.png" />
+    </div>
+    <div class="search">
+        <input type="search" class="form-control" placeholder="search">
+        <span>
+            <button class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </div>
+</div>
+
+<hr style="border:solid 1px;border-color:black;" />
+
+<div class="leader">
+    <p>当前位置：<a href="#">首页</a> - <a href="#">个人账号</a></p>
+</div>
+
+<div class="leader-left col-sm-2">
+    <table class="table4">
+        <tr>
+            <th>交易管理</th>
+        </tr>
+        <tr>
+            <td><button id="flip1">我的信息</button></td>
+        </tr>
+        <tr>
+            <td><button id="flip2">申请退货</button></td>
+        </tr>
+    </table>
+    <table class="table5">
+        <tr>
+            <th>我的账户</th>
+        </tr>
+        <tr>
+            <td><button id="flip3">商品收藏</button></td>
+        </tr>
+        <tr>
+            <td><button id="flip4">我的优惠劵</button></td>
+        </tr>
+        <tr>
+            <td><button id="flip5">我的积分</button></td>
+        </tr>
+        <tr>
+            <td><button id="flip6">我的预存款</button></td>
+        </tr>
+        <tr>
+            <td><button id="flip7">到货通知</button></td>
+        </tr>
+        <tr>
+            <td><button id="flip8">积分换优惠劵</button></td>
+        </tr>
+    </table>
+    <table class="table6">
+        <tr>
+            <th>个人信息</th>
+        </tr>
+        <tr>
+            <td><button id="flip9">个人地址</button></td>
+        </tr>
+        <tr>
+            <td><button id="flip10">客服</button></td>
+        </tr>
+    </table>
+    <table class="table7">
+        <tr>
+            <th>我的关系</th>
+        </tr>
+        <tr>
+            <td>测评</td>
+        </tr>
+        <tr>
+            <td>嗮图</td>
+        </tr>
+    </table>
+</div>
+
+<div id="panel">
+    <table class="table1">
+        <tr>
+            <th><h3>您好 xxx，欢迎进入会员中心</h3></th>
+        </tr>
+        <tr><th>&nbsp;</th></tr>
+        <tr>
+            <td>您目前是：非会员</td>
+            <td>账户积分：5000分</td>
+        </tr>
+        <tr>
+            <td>经验值：0 （经验到达500可以自动成为一星会员）</td>
+            <td>预存款余额：￥10.00</td>
+        </tr>
+        <tr class="tab1-t">
+            <td>交易提醒：</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>未付款订单<span class="badge">4</span></td>
+            <td>预售订单<span class="badge">0</span></td>
+        </tr>
+        <tr>
+            <td>到货通知<span class="badge">0</span></td>
+            <td>评论回复<span class="badge">0</span></td>
+        </tr>
+    </table>
+</div>
+
+<div id="pane2">
+  <table class="table2">
+      <tr class="tab2-2">
+          <td>订单号</td>
+          <td>名称</td>
+          <td>金额</td>
+          <td>操作</td>
+      </tr>
+      <tr class="tab-3">
+          <td colspan="4">暂时没有退货处理</td>
+      </tr>
+  </table>
+</div>
+
+<div id="pane3">
+    <table class="table3  col-sm-12">
+        <tr>
+            <th>最近收藏</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="clt col-6 col-sm-6 col-lg-5">
+                    <p><img src="~/img/collectbox-1.jpg"></p>
+                    <h5>Monster Guardians MSGD</h5>
+                    <p>￥300</p>
+                    <p>
+                        <a class="btn btn-default">购买</a>
+                        <a class="btn btn-default">移除</a>
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div class="clt col-6 col-sm-6 col-lg-5">
+                    <p><img src="~/img/collectbox-2.png"></p>
+                    <h5>Monster Guardians MSGD</h5>
+                    <p>￥300</p>
+                    <p>
+                        <a class="btn btn-default">购买</a>
+                        <a class="btn btn-default">移除</a>
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div class="clt col-6 col-sm-6 col-lg-5">
+                    <p><img src="~/img/collectbox-3.jpg"></p>
+                    <h5>Monster Guardians MSGD</h5>
+                    <p>￥300</p>
+                    <p>
+                        <a class="btn btn-default">购买</a>
+                        <a class="btn btn-default">移除</a>
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div class="clt col-6 col-sm-6 col-lg-5">
+                    <p><img src="~/img/collectbox-4.jpg"></p>
+                    <h5>Under Armour Command背包</h5>
+                    <p>￥273</p>
+                    <p>
+                        <a class="btn btn-default">购买</a>
+                        <a class="btn btn-default">移除</a>
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+    <div class="row col-sm-9">
+
+        <div id="pane4">4444444444444</div>
+    </div>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#flip1").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+            $("#flip2").click(function () {
+                $("#pane2").slideToggle("slow");
+                $("#panel").slideUp("slow");
+            });
+            $("#flip3").click(function () {
+                $("#pane3").slideToggle("slow");
+                $("#pane2").slideUp("slow");
+                $("#panel").slideUp("slow");
+            });
+            $("#flip4").click(function () {
+                $("#pane4").slideToggle("slow");
+                $("#pane3").slideUp("slow");
+                $("#pane2").slideUp("slow");
+                $("#panel").slideUp("slow");
+            });
+        });
+    </script>
+
+   

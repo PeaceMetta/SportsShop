@@ -1,0 +1,74 @@
+﻿/*顶部LOGO与搜索栏样式*/
+@media screen and (max-width:400px){
+	.head-body{
+		display: block;
+	}
+}
+
+@media screen and (min-width:400px){
+
+	.head-body{
+		display:flex;
+		height: 90px;
+		width: 100%;
+		min-width: 400px;
+		margin: 0px auto;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.head-body .logo{
+	height: 50%;
+	width: 50%;
+	min-width: 100px;
+    float:left;
+    margin-left:30px;
+}
+
+.head-body .search{
+	display: flex;
+	width: 35%;
+	min-width: 150px;
+	overflow: hidden;
+    margin-top:80px;
+}
+
+/*购物车样式*/
+
+.biaozhi{
+	float:left;
+	margin-top:20px;
+	font-size:35px;
+	font-family:"Times New Roman", Times, serif;
+}
+
+.line{
+	color:#000;
+	border:solid;
+	size:20px;
+}
+
+.shopcar-bottom{
+	color:#333;
+	background-color:#333;
+}
+
+.tr-head{
+	background-color:#333;
+    color:white;
+}
+
+.form-bottom a {
+	color:#333;
+}
+
+.but-1{
+    float:right;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.modal-dialog {
+    width:80%;
+}

@@ -1,0 +1,169 @@
+﻿@{
+    ViewBag.Title = "Category";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<environment>
+    <link rel="stylesheet" type="text/css" href="~/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/goods.css">
+    <script type="text/javascript" src="~/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="~/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/retina-1.1.0.js"></script>
+    <script type="text/javascript" src="~/js/scripts.js"></script>
+</environment>
+
+<div class="head-body">
+    <div class="logo">
+        <img src="~/img/logo.png.png" />
+    </div>
+    <div class="search">
+        <input type="search" class="form-control" placeholder="search">
+        <span>
+            <button class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </div>
+</div>
+
+<hr style="border:solid 1px;border-color:black;" />
+
+<div class="page-body">
+
+    <!--bootstrap折叠导航
+                <nav class="navbar navbar-default">
+                                    <div class="navbar-header">
+                                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar-collapse">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        </button>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="mynavbar-collapse">
+                                                        <div class="mynav">
+                                                    </div>
+                                </div>
+                </nav>-->
+
+    <div class="screening_box">
+
+        <ul class="screening">
+
+            <li><a href="#" id="list"><em>综合排序</em></a></li>
+
+            <li><a href="#" id="list"><em>人气</em></a></li>
+
+            <li><a href="#" id="list"><em>销量</em></a></li>
+
+            <li><a href="#" id="list"><em>信用</em></a></li>
+
+            <li>
+                <a href="#" id="list"><em>价格</em></a>
+
+                <ul>
+
+                    <li><a href="#"><i class="price"></i><em>价格从高到低</em></a></li>
+
+                    <li><a href="#"><i class="price"></i><em>价格从低到高</em></a></li>
+
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="item">
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img\football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img/football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img/football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img/football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img/football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img/football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img/football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+        <div class="item_list">
+            <div class="img_item">
+                <a href="#"><img src="~/img/football_1.jpg" alt=""></a>
+            </div>
+            <p>文字介绍文字介绍文字介绍</p>
+            <p class="money">¥888</p>
+            <p>评论：</p>
+        </div>
+    </div>
+    <!--<div class="content-top">
+        <div id="carousel-banner" class="carousel slide nav-banner">
+            <ul class="carousel-indicators">
+                <li data-target="#carousel-banner" data-slide-to="0"></li>
+                <li data-target="#carousel-banner" data-slide-to="1"></li>
+                <li data-target="#carousel-banner" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="item active"><img src="../img/ad1.jpg" alt=""></div>
+                <div class="item"><img src="../img/ad2.jpg" alt=""></div>
+                <div class="item"><img src="../img/ad3.jpg" alt=""></div>
+            </div>
+            <a href="#carousel-banner" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel-banner" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <div class="content-top-right">
+            <img src="../img/ad4.jpg" alt=""><img src="../img/ad5.jpg" alt="">
+        </div>
+    </div>-->
+</div>

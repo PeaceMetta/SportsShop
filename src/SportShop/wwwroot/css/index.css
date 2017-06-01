@@ -1,0 +1,271 @@
+/*全局样式*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Tahoma";
+	font-size: 14px;
+	line-height: 18px;
+	color: #555;
+	background-color: #eee;
+}
+
+ul{
+	list-style: none;
+	margin-bottom: 0;
+}
+
+li{
+	transition: all 0.3s;
+}
+
+span{
+	transition: all 0.3s;
+	font-size: 20px;
+}
+
+span.badge{
+	margin-left: 8px;
+}
+
+a{
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+
+a,a:hover,a:visited,a:link{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/*顶部LOGO与搜索栏样式*/
+@media screen and (max-width:400px){
+	.head-body{
+		display: block;
+	}
+}
+
+@media screen and (min-width:400px){
+
+	.head-body{
+		display:flex;
+		height: 90px;
+		width: 100%;
+		min-width: 400px;
+		margin: 0px auto;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.head-body .logo{
+	height: 50%;
+	width: 50%;
+	min-width: 100px;
+    float:left;
+    margin-left:30px;
+}
+
+.head-body .search{
+	display: flex;
+	width: 35%;
+	min-width: 150px;
+	overflow: hidden;
+    margin-top:80px;
+}
+
+
+/*页面主体样式*/
+.page-body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+/*导航栏样式*/
+
+/*一级菜单样式*/
+.mynav>ul{
+	display: flex;
+	background-color: #000;
+}
+
+
+.mynav>ul>li{
+	min-width: 120px;
+}
+
+.mynav>ul>li>a{
+	display: block;
+}
+
+
+.mynav>ul>li>a:hover{
+	color: #569cd2;
+}
+
+.mynav>ul>li>a>em{
+	font-style: normal;
+	margin: 0 20px;
+}
+
+
+@media screen and (max-width: 1200px){
+	.mynav>ul{
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.mynav>ul>li>a{
+		height: 30px;
+		font-size: 14px;
+		text-align: left;
+	}
+	.mynav>ul>li>a>em{
+		line-height: 30px;
+	}
+}
+
+@media screen and (min-width:1200px){
+	.mynav>ul{
+		justify-content: space-around;
+		height: 50px;
+	}
+
+	.mynav>ul>li>a{
+		height: 50px;
+		font-size: 18px;
+	}
+
+	.mynav>ul>li>a>em{
+		line-height: 50px;
+	}
+}
+
+
+
+/*二级菜单样式*/
+.mynav ul li ul{
+	position: absolute;
+	display: none;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+	z-index: 1;
+}
+
+.mynav ul li:hover ul{
+	display: block;
+}
+
+.mynav ul li ul li{
+	background-color: #fff;
+}
+
+.mynav ul li ul li a{
+	display: block;
+	height: 30px;
+	font-size: 16px;
+	color: rgb(34, 34, 34);
+	padding: 0 25px;
+}
+
+.mynav ul li ul li a em{
+	font-style: normal;
+	line-height: 30px;
+}
+
+
+.mynav ul li ul li:hover{
+	background-color: #77a2d2;
+}
+
+.fa{
+	display: inline-block;
+	padding-right: 10px;
+}
+
+/*顶部内容样式*/
+
+.content-top{
+	display: flex;
+}
+
+
+/*广告栏样式*/
+
+
+.nav-banner{
+	flex: 0 1 60%;
+	height: 500px;
+}
+
+.nav-banner img{
+	width: 100%;
+	max-height: 500px;
+}
+
+
+/*顶部右侧广告样式*/
+
+.content-top-right{
+	display: flex;
+	flex-direction: column;
+	flex: 0 1 40%;
+	height: 500px;
+}
+
+.content-top-right img{
+	display: block;
+	width: 100%;
+	flex: 0 0 50%;
+	max-height: 50%;
+}
+
+
+/*展示栏样式*/
+
+.show{
+	padding-right: 50px;
+}
+
+/*展示栏标题头部*/
+.show-head{
+	display: flex;
+	height: 50px;
+	width: 90%;
+	margin: 25px auto;
+}
+
+.show-head .line{
+	flex: 1;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	position: relative;
+	top: 24px;
+}
+
+.show-head .text{
+	padding: 0 12px;
+	line-height: 50px;
+	font-style: oblique;
+	color: #666;
+	font-size: 24px;
+}
+
+/*展示栏图片内容框*/
+
+.show-img{
+	height: 150px;
+}
+
+.show-img img{
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+
